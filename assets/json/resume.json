@@ -5,7 +5,7 @@
     "image": "",
     "email": "abaksy@ucsd.edu",
     "phone": "(619) 953-7285",
-    "url": "https://abaksy.github.io/al-folio/",
+    "url": "https://abaksy.github.io/",
     "summary": "A Graduate Student at UCSD experienced in cloud-native development, systems programming and Machine Learning",
     "profiles": [
       {
@@ -37,14 +37,13 @@
   ],
   "volunteer": [
     {
-      "organization": "Hewlett Packard Enterprise",
-      "location": "Research & Development Intern",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "Kidwai Memorial Institute of Oncology",
+      "location": "Bengaluru, India",
+      "position": "Student Volunteer",
+      "url": "https://samikshafoundation.org",
+      "startDate": "2019-10-01",
+      "endDate": "2019-10-01",
+      "summary": "Conducted music learning initiatives for children under 12 years of age "
     }
   ],
   "education": [
@@ -53,7 +52,7 @@
       "location": "La Jolla, CA",
       "url": "https://www.ucsd.edu/",
       "area": "Computer Science",
-      "studyType": "MS",
+      "studyType": "Master of Science",
       "startDate": "2024-09-01",
       "score": "4.0",
       "courses": ["Parallel Computation", "Recommender Systems and Web Mining", "Operating Systems"]
@@ -63,11 +62,11 @@
       "location": "Bengaluru, India",
       "url": "https://pes.edu/",
       "area": "Computer Science and Engineering",
-      "studyType": "B.Tech",
+      "studyType": "Bachelor of Technology",
       "startDate": "2018-07-01",
       "endDate": "2022-09-01",
       "score": "9.43/10",
-      "courses": ["Parallel Computation", "Recommender Systems and Web Mining", "Operating Systems"]
+      "courses": ["Cloud and Distributed Computing", "Machine Learning", "Heterogeneous Parallelism", "Operating Systems", "Data Structures and Algorithms"]
     }
   ],
   "awards": [
@@ -118,18 +117,18 @@
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "CalBERT: Code-mixed Adaptive Language representations using BERT",
+      "publisher": "AAAI-MAKE 2022",
+      "releaseDate": "2022-03-21",
+      "url": "https://ceur-ws.org/Vol-3121/short3.pdf",
+      "summary": "This work proposes a novel approach to improve performance in Transformers by introducing an additional step called \"Siamese Pre-Training\", which allows pre-trained monolingual Transformers to adapt language representations for code-mixed languages with a few examples"
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "Analysis of Zomato Services using Recommender System Models",
+      "publisher": "IEEE CONIT 2021",
+      "releaseDate": "2021-08-04",
+      "url": "https://ieeexplore.ieee.org/document/9498534",
+      "summary": "Analyze and derive insightful information from data about restaurants in the city of Bangalore, India that are listed on the food reviewing and delivery service Zomato. Compares the relative performance of various recommender system approaches on the given dataset and proposes an ensemble model for the best predictions."
     }
   ],
   "skills": [
@@ -149,13 +148,18 @@
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "English",
       "fluency": "Native speaker",
       "icon": ""
     },
     {
-      "language": "English",
+      "language": "Hindi",
       "fluency": "Fluent",
+      "icon": ""
+    },
+    {
+      "language": "French",
+      "fluency": "Beginner",
       "icon": ""
     }
   ],
@@ -171,18 +175,6 @@
         "Quantum Communication",
         "Quantum Teleportation"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     }
   ],
   "projects": [
