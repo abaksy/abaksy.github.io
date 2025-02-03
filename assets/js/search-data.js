@@ -92,8 +92,8 @@ ninja.data = [{
           description: "an in-memory key-value store in pure Python",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-palying-with-bloom-filters",
-          title: 'palying with bloom filters',
+            },},{id: "projects-playing-with-bloom-filters",
+          title: 'playing with bloom filters',
           description: "the fun world of probabilistic data structures",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
