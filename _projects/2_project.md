@@ -1,8 +1,8 @@
 ---
 layout: page
-title: palying with bloom filters
+title: playing with bloom filters
 description: the fun world of probabilistic data structures 
-img: assets/img/db-image.jpg
+img: assets/img/2.jpg
 importance: 1
 category: personal
 related_publications: false
