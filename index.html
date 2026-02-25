@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aronya Baksy | Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Essential Layout Styles */
+    .layout { display: flex; max-width: 1200px; margin: 0 auto; padding: 32px 20px 48px; }
+    .sidebar { width: 180px; flex-shrink: 0; padding-right: 24px; position: sticky; top: 32px; align-self: flex-start; }
+    .sidebar nav { background: var(--bg-muted); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); padding: 16px; }
+    .sidebar .nav-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; }
+    .sidebar .nav-link { display: block; padding: 8px 12px; margin: 4px 0; border-radius: var(--radius-sm); font-size: 0.9rem; color: var(--text-main); text-decoration: none; border: none; cursor: pointer; transition: background-color 0.15s ease; text-align: left; width: 100%; background: none; }
+    .sidebar .nav-link:hover { background: var(--border-subtle); }
+    .sidebar .nav-link.active { background: var(--accent); color: #fff; }
+    .main-content { flex: 1; min-width: 0; }
+    .content-section { display: none; }
+    .content-section.active { display: block; }
+
+    @media (max-width: 900px) {
+      .layout { flex-direction: column; padding: 20px 14px 32px; }
+      .sidebar { width: 100%; padding-right: 0; margin-bottom: 24px; position: static; }
+      .sidebar nav { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 12px 16px; }
+      .sidebar .nav-title { margin-bottom: 0; margin-right: 8px; }
+      .sidebar .nav-link { width: auto; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav>
+        <div class="nav-title">Portfolio</div>
+        <a href="#" class="nav-link active" data-section="home">About</a>
+        <a href="#" class="nav-link" data-section="projects">Projects</a>
+        <a href="#" class="nav-link" data-section="resume">Resume</a>
+        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 8px 0; width: 100%;">
+        <button id="theme-toggle" class="nav-link">🌙 Dark Mode</button>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+      <section id="home" class="content-section active">
+        <div class="page">
+          <header class="page-header">
+            <h1 class="course-title">Aronya Baksy</h1>
+            <div class="course-codes">M.S. in Computer Science @ UC San Diego</div>
+
+            <div class="course-meta">
+              <div><span class="meta-label">Location:</span> La Jolla, CA</div>
+              <div><span class="meta-label">GitHub:</span> <a href="https://github.com/abaksy">@abaksy</a></div>
+              <div><span class="meta-label">LinkedIn:</span> <a href="https://linkedin.com/in/aronya-baksy">in/aronya-baksy</a></div>
+              <div><span class="meta-label">Email:</span> <a href="mailto:abaksy@ucsd.edu">abaksy@ucsd.edu</a></div>
+            </div>
+          </header>
+
+          <main>
+            <section class="section">
+              <h2>Bio</h2>
+              <p>
+                I am a software engineer with a strong background in <strong>cloud infrastructure, distributed systems, and systems programming</strong>[cite: 16, 33]. Currently pursuing my Master's at <strong>UC San Diego</strong>, I specialize in building scalable CI/CD solutions and high-performance applications[cite: 4, 29].
+              </p>
+            </section>
+
+            <section class="section">
+              <h2>Technical Stack</h2>
+              <ul>
+                <li><strong>Languages:</strong> Go, Rust, Python, C++ [cite: 15]</li>
+                <li><strong>Infrastructure:</strong> Kubernetes, Docker, Terraform, GitLab CI, GitHub Actions [cite: 15]</li>
+                <li><strong>Cloud/AWS:</strong> EKS, ECS, EC2, Lambda, SQS, RDS [cite: 15]</li>
+                <li><strong>Databases:</strong> PostgreSQL, MongoDB, Cassandra, Redis [cite: 15]</li>
+              </ul>
+            </section>
+          </main>
+        </div>
+      </section>
+
+      <section id="projects" class="content-section">
+        <div class="page">
+          <header class="page-header">
+            <h1 class="course-title">Technical Projects</h1>
+            <p class="construction-note">Experimental tools and systems engineering work.</p>
+          </header>
+
+          <div class="table-wrapper">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Project</th>
+                  <th>Description</th>
+                  <th>Stack</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>gocpparallel</td>
+                  <td>M:N user-space threading model implementing Go-style goroutines in C++[cite: 34, 37].</td>
+                  <td>C++, pthreads</td>
+                  <td>Complete [cite: 35]</td>
+                </tr>
+                <tr>
+                  <td>pycask</td>
+                  <td>Implementation of BitCask key-value database architecture in pure Python[cite: 44, 47].</td>
+                  <td>Python, Docker</td>
+                  <td>Complete [cite: 45]</td>
+                </tr>
+                <tr>
+                  <td>Mangrove Monitoring</td>
+                  <td>Automated AWS ECS deployments for image recognition model inference[cite: 39, 42].</td>
+                  <td>Terraform, AWS</td>
+                  <td>Active [cite: 40]</td>
+                </tr>
+                <tr>
+                  <td>Togepi</td>
+                  <td>Distributed version control system utilizing Dropbox REST APIs for storage[cite: 50, 55].</td>
+                  <td>Python, PyQT</td>
+                  <td>Complete [cite: 51]</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="content-section">
+        <div class="page">
+            <header class="page-header">
+                <h1 class="course-title">Experience & Education</h1>
+            </header>
+            
+            <section class="section">
+                <h2>Education</h2>
+                <p><strong>UC San Diego</strong> | M.S. in Computer Science (GPA: 4.0) [cite: 4, 5]</p>
+                <p class="course-label">Sept 2024 — Mar 2026 [cite: 8]</p>
+                
+                <p><strong>PES University</strong> | B.Tech in Computer Science (GPA: 3.89) [cite: 10, 11]</p>
+                <p class="course-label">Jul 2018 — May 2022 [cite: 12]</p>
+            </section>
+
+            <section class="section">
+                <h2>Work Experience</h2>
+                <h3>Software Engineer Intern @ Apple Inc.</h3>
+                <p class="course-label">June 2025 — Sept 2025 [cite: 18, 19]</p>
+                <ul>
+                    <li>Improved Python image processing runtime by 25% via profiling[cite: 20].</li>
+                    <li>Deployed Redis as in-memory cache on Kubernetes, reducing response times by 20%[cite: 21].</li>
+                </ul>
+
+                <h3>Cloud Developer @ Hewlett Packard Enterprise</h3>
+                <p class="course-label">Aug 2022 — Aug 2024 [cite: 27, 28]</p>
+                <ul>
+                    <li>Built GitOps CI/CD solutions for 30+ production tenants, reducing deployment time from 3 days to 6 hours[cite: 29].</li>
+                    <li>Hardened microservices to DISA IL4 standards for disconnected Private Cloud products[cite: 32].</li>
+                </ul>
+            </section>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Theme Logic
+      const themeToggle = document.getElementById('theme-toggle');
+      const htmlElement = document.documentElement;
+      const savedTheme = localStorage.getItem('theme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      
+      htmlElement.setAttribute('data-theme', savedTheme);
+      themeToggle.innerHTML = savedTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+
+      themeToggle.addEventListener('click', () => {
+        const newTheme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeToggle.innerHTML = newTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+      });
+
+      // Navigation Logic
+      const navLinks = document.querySelectorAll('.nav-link[data-section]');
+      const sections = document.querySelectorAll('.content-section');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetSection = this.getAttribute('data-section');
+          
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+          
+          sections.forEach(section => {
+            section.classList.toggle('active', section.id === targetSection);
+          });
+          window.scrollTo(0, 0);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

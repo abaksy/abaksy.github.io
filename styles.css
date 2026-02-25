@@ -1,0 +1,233 @@
+/* styles.css */
+
+:root {
+  /* Core Colors - Light Mode */
+  --bg: #ffffff;
+  --bg-muted: #f5f5f5;
+  --border-subtle: #e0e0e0;
+  --text-main: #222222;
+  --text-muted: #666666;
+  --accent: #8900e1;      /* NYU Violet for Light Mode */
+  --accent-vis: #57068c;  /* Visited Violet */
+  
+  /* UI Elements */
+  --radius-lg: 12px;
+  --radius-sm: 6px;
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.04);
+  --table-zebra: #fafafa;
+  --table-hover: #f0f0f0;
+}
+
+[data-theme="dark"] {
+  /* Core Colors - Dark Mode */
+  --bg: #121212;
+  --bg-muted: #1e1e1e;
+  --border-subtle: #333333;
+  --text-main: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --accent: #bb86fc;      /* Bright Lavender for Dark Mode */
+  --accent-vis: #a370f7;
+  
+  /* UI Elements */
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --table-zebra: #1a1a1a;
+  --table-hover: #252525;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  background: var(--bg);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+/* Header */
+
+.page-header {
+  padding: 24px 24px 20px;
+  background: var(--bg-muted);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 32px;
+}
+
+.course-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.course-title {
+  font-size: 1.8rem;
+  margin: 0 0 4px;
+  color: var(--text-main);
+}
+
+.course-codes {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.course-meta {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.meta-label {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Links */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:link {
+  color: var(--accent);
+  border-bottom-color: rgba(187, 134, 252, 0.2); /* Dynamic fallback */
+}
+
+/* Contextual border colors for links based on the accent */
+:root a:link { border-bottom-color: rgba(137, 0, 225, 0.25); }
+[data-theme="dark"] a:link { border-bottom-color: rgba(187, 134, 252, 0.3); }
+
+a:visited {
+  color: var(--accent-vis);
+}
+
+a:hover {
+  color: var(--accent-vis);
+  border-bottom-style: solid;
+  border-bottom-color: var(--accent-vis);
+}
+
+/* Schedule table */
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg);
+  box-shadow: var(--shadow-soft);
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.schedule-table thead {
+  background: var(--bg-muted);
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 11px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.schedule-table th {
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background: var(--table-zebra);
+}
+
+.schedule-table tbody tr:hover {
+  background: var(--table-hover);
+}
+
+.schedule-table td:first-child {
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.schedule-table td:last-child {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Sections & General Content */
+
+.section {
+  margin-bottom: 28px;
+  color: var(--text-main);
+}
+
+.section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.construction-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-left: 2px solid var(--border-subtle);
+  padding-left: 10px;
+  margin: 0;
+}
+
+/* Footer */
+
+.page-footer {
+  margin-top: 32px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 768px) {
+  .page {
+    padding: 20px 14px 32px;
+  }
+  .page-header {
+    padding: 18px 18px 14px;
+  }
+  .course-title {
+    font-size: 1.5rem;
+  }
+  .schedule-table {
+    min-width: 520px;
+  }
+}
